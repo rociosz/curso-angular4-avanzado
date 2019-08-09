@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TiendaComponent implements OnInit {
   public titulo;
+  public nombreDelAlmacen: string;
+  public miAlmacen;
 
   constructor() { 
     this.titulo = 'Esta es la Tienda de Útiles Escolares';
@@ -15,4 +17,13 @@ export class TiendaComponent implements OnInit {
   ngOnInit() {
   }
 
+  mostrarNombre(){
+  	console.log(this.nombreDelAlmacen);
+  }
+
+  verDatosAlmacen(event){
+  	console.log(event);
+    this.miAlmacen = event;
+  }
+  
 }

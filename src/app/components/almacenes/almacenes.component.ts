@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'almacenes',
   templateUrl: './almacenes.component.html'
 })
 export class AlmacenesComponent implements OnInit {
-  public nombre: string;
-  public cantidad:  number;
+  @Input() nombre: string;
+  @Input('cantidades_cuadrados') cantidad:  number;
   public longitud: string;
   public abierto: boolean;
 

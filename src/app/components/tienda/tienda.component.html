@@ -1,3 +1,4 @@
+<!--Componente padre--> Padre:
 <h1>{{titulo}}</h1>
     <ul>
         <li>Lapiceros</li>
@@ -5,3 +6,21 @@
         <li>Colores</li>
         <li>Plumones</li>
     </ul>
+
+<hr/>
+
+<p>
+    Nombre del parque:
+    <input type="text"[(ngModel)]="nombreDelAlmacen" (keyup)="mostrarNombre()" />
+</p>
+
+<p>
+    Resulatdo: {{nombreDelAlmacen}}
+</p>
+
+<!--Componente hijo--> Hijo:
+<almacenes  [nombre]="nombreDelAlmacen" 
+            [cantidades_cuadrados]="576"
+            (pasameLosDatos)="verDatosAlmacen($event)">
+
+</almacenes>
